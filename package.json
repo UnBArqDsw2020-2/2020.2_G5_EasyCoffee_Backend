@@ -1,0 +1,26 @@
+{
+  "name": "2020.2_G5_EasyCoffee_Backend",
+  "version": "1.0.0",
+  "description": "Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto. Demais diretrizes sobre a organização da wiki constam no Moodle Aprender 3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnBArqDsw2020-2/2020.2_G5_EasyCoffee_Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnBArqDsw2020-2/2020.2_G5_EasyCoffee_Backend/issues"
+  },
+  "homepage": "https://github.com/UnBArqDsw2020-2/2020.2_G5_EasyCoffee_Backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.0",
+    "nodemon": "^2.0.7"
+  }
+}
