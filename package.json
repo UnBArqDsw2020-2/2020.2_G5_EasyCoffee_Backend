@@ -4,8 +4,7 @@
   "description": "Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto. Demais diretrizes sobre a organização da wiki constam no Moodle Aprender 3.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
