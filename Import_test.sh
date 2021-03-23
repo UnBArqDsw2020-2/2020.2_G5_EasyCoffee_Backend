@@ -13,11 +13,15 @@ docker-compose up -d
 
 sleep 10s
 
-docker cp ./test/dados.json easy_db:/
+docker cp ./test/ easy_db:/
  
 docker exec -it easy_db mongoimport --jsonArray --db easydb --collection product \
           --authenticationDatabase admin --username admin --password admin \
-          --drop --file dados.json
+          --drop --file ./test/prod_dados.json
+
+docker exec -it easy_db mongoimport --jsonArray --db easydb --collection users \
+          --authenticationDatabase admin --username admin --password admin \
+          --drop --file ./test/user_dados.json
 ;;
 "2")
 npm install

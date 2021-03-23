@@ -31,4 +31,4 @@ PostSchema.pre('save',async function(next){
 });
 
 
-module.exports = mongoose.model('Post',PostSchema);
+module.exports = mongoose.model('users',PostSchema);
