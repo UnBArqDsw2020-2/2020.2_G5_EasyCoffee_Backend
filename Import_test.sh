@@ -28,9 +28,9 @@ npm install
 docker-compose up -d 
 ;;
 "3")
-docker stop easy_backend easy_db easy_express
+docker stop easy_backend easy_db express
 
-docker rm easy_backend easy_db easy_express
+docker rm easy_backend easy_db express
 ;;
 *)
 echo "Não compativel"
