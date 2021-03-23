@@ -1,0 +1,62 @@
+[
+    {
+      "_id": "1",
+      "nome": "Kalahari Café | Torrado em Grãos 350g",
+      "descricao": "Kalahari Café Catuaí Amarelo 84 pts Serra da Mantiqueira, MG Corpo médio, sabor caramelo, baunilha, acidez cítrica, retrogosto médio.",
+      "categoria": "categoria 1",
+      "preco": 5,
+      "precoEmPromocao": 85,
+      "quantidade": 90,
+      "emPromocao": false,
+      "avaliacao": 70,
+      "quantidadeDeAvaliacoes": 24
+    },
+    {
+      "_id" : "2",
+      "nome": "CAFÉ PDS SUAVE – EM GRÃOS – 1kg",
+      "descricao": "Passada de geração em geração, a Fazenda Ponta da Serra hoje é administrada pela terceira e quarta geração.",
+      "categoria": "categoria 2",
+      "preco": 81,
+      "precoEmPromocao": 53,
+      "quantidade": 5,
+      "emPromocao": false,
+      "avaliacao": 30,
+      "quantidadeDeAvaliacoes": 29
+    },
+    {
+      "_id" : "3",
+      "nome": "Vale dos Barbados Morango do Mato 250g em grão",
+      "descricao": "descricao 3",
+      "categoria": "categoria 3",
+      "preco": 81,
+      "precoEmPromocao": 31,
+      "quantidade": 10,
+      "emPromocao": false,
+      "avaliacao": 62,
+      "quantidadeDeAvaliacoes": 91
+    },
+    {
+      "_id" : "4",
+      "nome": "Café Especial da Bruna Premiado 250g Grão",
+      "descricao": "Café de produção familiar, colheita seletiva manual. Nosso objetivo é produzir cafés com características únicas da região das Montanhas do Espírito Santo integrados com os 40% de Mata Atlântica preservados na propriedade.",
+      "categoria": "categoria 4",
+      "preco": 26,
+      "precoEmPromocao": 16,
+      "quantidade": 53,
+      "emPromocao": false,
+      "avaliacao": 34,
+      "quantidadeDeAvaliacoes": 39
+    },
+    {
+      "_id" : "5",
+      "nome": "Café Especial Diversão da Sonia Maria F. Moura",
+      "descricao": "Café com aromas de castanha e amêndoa, sabor de chá preto adocicado e acidez alta, corpo médio com uma finalização marcante longa e prazerosa. Café especial 100% arábica da variedade Bourbon Amarelo cultivado a 1.130m de altitude, com processo Natural, seca em terreiro suspenso e estufa. diretamente da região das Matas de Minas na cidade de Santa Margarida – MG Localizado no  Cº São Felix",
+      "categoria": "categoria 5",
+      "preco": 82,
+      "precoEmPromocao": 84,
+      "quantidade": 61,
+      "emPromocao": false,
+      "avaliacao": 14,
+      "quantidadeDeAvaliacoes": 5
+    }
+  ]
