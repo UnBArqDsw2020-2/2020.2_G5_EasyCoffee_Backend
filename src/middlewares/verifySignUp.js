@@ -2,11 +2,13 @@ const db = require("../models");
 const ROLES = db.ROLES;
 const User = db.user;
 
-checkDuplicateUsernameOrEmail = (req, res, next) => {
+checkDuplicateUsernameOrEmail =  (req, res, next) => {
+    console.log(req.body);
     User.findOne({
-        username: req.body.username
+        username:  req.body.username,
     }).exec((err, user) => {
-        if (err) {
+        if (err !== undefined) {
+            console.log('Error');
             res.status(500).send({ message: err });
             return;
         }
@@ -17,7 +19,7 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
         }
 
         User.findOne({
-            email: req.body.email
+            email:  req.body.email
         }).exec((err, user) => {
             if (err) {
                 res.status(500).send({ message: err });
@@ -34,8 +36,8 @@ checkDuplicateUsernameOrEmail = (req, res, next) => {
     });
 };
 
-checkRolesExisted = (req, res, next) => {
-    if (req.body.roles) {
+const checkRolesExisted =  (req, res, next) => {
+    if ( req.body.roles) {
         for (let i = 0; i < req.body.roles.length; i++){
             if (!ROLES.includes(req.body.roles[i])) {
                 res.status(400).send({

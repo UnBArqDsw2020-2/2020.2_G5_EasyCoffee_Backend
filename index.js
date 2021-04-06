@@ -10,23 +10,22 @@ const role = db.role;
 const app = express();
 
 let corsOptions = {
-  origin : "http://localhost:3000"
+  origin: "http://localhost:3000"
 }
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
+
 
 const initial = () => {
   Role.estimatedDocumentCount((err, count) => {
-    if (!err && (count === 0))
-    {
+    if (!err && (count === 0)) {
       new Role({
         name: "user"
       }).save(err => {
-        if (err)
-        {
+        if (err) {
           console.log("error ", err);
         }
         console.log("added 'user' to roles collection");
@@ -35,8 +34,7 @@ const initial = () => {
       new Role({
         name: "admin"
       }).save(err => {
-        if (err)
-        {
+        if (err) {
           console.log("error ", err);
         }
         console.log("added 'admin' to roles collection");
@@ -56,6 +54,6 @@ mongoose
   })
   .catch(err => console.log(err));
 
-  const port = 3000;
+const port = 3000;
 
 app.listen(port, () => console.log('Server running...'));
