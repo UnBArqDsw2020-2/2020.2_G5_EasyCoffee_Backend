@@ -5,6 +5,7 @@ const app = express();
 app.use(express.json());
 
 require('./controllers/authControllers')(app)
+require('./routes/product.routes')(app)
 
 app.get('/',(req,res)=>{
   res.send('we are on home')

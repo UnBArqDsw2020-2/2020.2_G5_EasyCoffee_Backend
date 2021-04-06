@@ -14,15 +14,15 @@ const ProductSchema = mongoose.Schema({
       required: true
   },
   preco: {
-      type: Float,
+      type: Number,
       required: true
   },
   precoEmPromocao: {
-      type: Float,
+      type: Number,
       required: false
   },
   quantidade: {
-      type: Int,
+      type: Number,
       required: true
   },
   emPromocao: {
@@ -30,11 +30,11 @@ const ProductSchema = mongoose.Schema({
       required: false
   },
   avaliacao: {
-      type: Float,
+      type: Number,
       required: false
   },
   quantidadeDeAvaliacoes: {
-      type: int,
+      type: Number,
       required: false
   }
 });
