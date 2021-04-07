@@ -1,22 +1,10 @@
-const express = require('express')
+const express = require('express');
+const productController = require('../controllers/productController');
+const product = require('../controllers/productController')
 const router = express.Router();
 
-const product = require('../controllers/productController')
+router.post('/create', productController.create);
+router.get('/read', productController.read);
+router.get('', productController.readAll);
 
-router.get('/',(req,res)=>{
-  res.send('we are on posts')
-});
-
-router.post('/product/post', product.registrarProduto ).then(() => {
-    console.log("--------sucesso--------------")
-})
-.catch((e) => {
-    console.log("--------erro--------------")   
-});
-
-router.get('/product',(req,res)=>{
-  res.send('we are on products')
-});
-
-
-module.exports = app =>app.use(router);
+module.exports = app =>app.use('/product', router);

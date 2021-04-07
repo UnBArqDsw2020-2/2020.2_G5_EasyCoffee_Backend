@@ -3,7 +3,8 @@ const mongoose = require('../database');
 const ProductSchema = mongoose.Schema({
   nome: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   descricao: {
       type: String,
@@ -19,7 +20,8 @@ const ProductSchema = mongoose.Schema({
   },
   precoEmPromocao: {
       type: Number,
-      required: false
+      required: false,
+      default: 0.0
   },
   quantidade: {
       type: Number,
@@ -27,15 +29,19 @@ const ProductSchema = mongoose.Schema({
   },
   emPromocao: {
       type: Boolean,
-      required: false
+      required: false,
+      default: false
+
   },
   avaliacao: {
       type: Number,
-      required: false
+      required: false,
+      default: 0
   },
   quantidadeDeAvaliacoes: {
       type: Number,
-      required: false
+      required: false,
+      default: 0
   }
 });
 
