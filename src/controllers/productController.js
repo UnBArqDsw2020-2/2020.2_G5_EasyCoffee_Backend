@@ -3,7 +3,7 @@ const Product = require("../models/Product");
 const db = require('../database');
 
 const productController = {
-  // Creat
+  // Create
   async create(req, res) {
     const product = req.body
     try {
@@ -33,11 +33,32 @@ const productController = {
     } catch(err) {
       return res.status(400).send({err:'Não foi possível encontrar os produtos!'})
     }
-  }
+  },
 
-  // Edit
+  // update
+  async update(req, res) {
+    const id = req.params.id
+    const product = req.body
+    try {
+      await Product.findByIdAndUpdate(id,product);
+      return res.send({msg:'Produto atualizado com sucesso!'});
+    } catch (err) {
+      return res.status(400).send({err:'Não foi possível atualizar o produto!'})
+    }
+  },
 
   // Delete
+  async delete(req, res) {
+    const id = req.params.id
+    try {
+      await Product.findByIdAndDelete(id);
+      return res.send({msg:'Produto deletado com sucesso!'});
+    } catch (err) {
+      return res.status(400).send({err:'Não foi possível deletar o produto!'})
+    }
+  },
+
+
 };
 
 module.exports = productController;
