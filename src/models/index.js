@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('../database');
 mongoose.Promise = global.Promise;
 
 const db = {};

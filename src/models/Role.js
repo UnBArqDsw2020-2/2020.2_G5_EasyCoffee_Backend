@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('../database');
 
 const RoleSchema = new mongoose.Schema({
     name: String
