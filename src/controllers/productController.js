@@ -19,7 +19,7 @@ const productController = {
     const id = req.params.id;
     try {
       const product = await Product.findById(id);
-      return res.json({product});
+      return res.status(200).json(product);
     } catch(err) {
       return res.status(400).json({err:'Não foi possível encontrar o produto!'});
     }
@@ -29,7 +29,7 @@ const productController = {
   async readAll(req, res) {
     try {
       const products = await Product.find();
-      return res.json({products});
+      return res.status(200).json(products);
     } catch(err) {
       return res.status(400).json({err:'Não foi possível encontrar os produtos!'});
     }

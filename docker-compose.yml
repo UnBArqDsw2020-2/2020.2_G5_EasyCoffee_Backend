@@ -9,7 +9,7 @@ services:
       - mongo
     command: npm start 
     ports:
-      - '3000:3000'
+      - '3333:3333'
     volumes:
       - .:/usr/app
     external_links:

@@ -32,6 +32,7 @@ const auth = {
         }
 
     },
+
     async signin (req, res) {
 
         const user = await User.findOne({username: req.body.username});
