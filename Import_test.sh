@@ -15,7 +15,7 @@ sleep 10s
 
 docker cp ./test/ easy_db:/
  
-docker exec -it easy_db mongoimport --jsonArray --db easydb --collection product \
+docker exec -it easy_db mongoimport --jsonArray --db easydb --collection products \
           --authenticationDatabase admin --username admin --password admin \
           --drop --file ./test/prod_dados.json
 
