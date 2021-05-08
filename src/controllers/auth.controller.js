@@ -26,7 +26,9 @@ const auth = {
             const user = new User(req.body);
 
             await user.save();
-            return res.send(`${user}`);
+            //return res.send(`${user}`);
+            return res.status(201).header('auth-token', token)
+            .json({  msg: "Usuário cadastrado com sucesso!", token:token});
         } catch (error) {
             return res.json("Erro: email ou senha inválidos");
         }
@@ -53,11 +55,9 @@ const auth = {
             });
         }
 
-        let token = jwt.sign({ id: user.id }, config.secret, {
-            expiresIn: 86400
-        });
+        let token = jwt.sign({ id: user.id, username: user.username }, config.secret);
 
-        res.status(200).json({
+        return res.status(200).json({
             id: user._id,
             username: user.username,
             email: user.email,
